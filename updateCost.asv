@@ -1,0 +1,7 @@
+function q = updateCost(q, root, Nodes)
+    if q.idx == root.idx
+        q.cost = root.cost;
+    else
+        q.cost = norm(q.point - Nodes(q.parent).point) + updateCost(Nodes(q.parent), root, Nodes);
+    end
+    

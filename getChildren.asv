@@ -1,0 +1,11 @@
+function updateCost(root, Nodes)
+   if length(root.child) == 1  
+       c
+   else 
+       
+       for i=1:length(root.child)
+          idx_children = [root.idx; updateCost(Nodes(root.child(i)), Nodes)];
+          fprintf('proceeding');
+       end
+   end
+end

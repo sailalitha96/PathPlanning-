@@ -1,0 +1,7 @@
+function cost = costToRoot(q, root, Nodes)
+    if q.idx == root.idx
+        cost = 0;
+    else
+        qcost = norm(q.point - Nodes(q.parent).point) + costToRoot(Nodes(q.parent), root, Nodes);
+    end
+end
